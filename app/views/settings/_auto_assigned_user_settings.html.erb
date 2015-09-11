@@ -1,5 +1,5 @@
     <%-
-      roles = Role.all(:order => "position ASC")
+      roles = Role.order('name DESC')
       selected = @settings['client_roles'].collect(&:to_i) unless @settings['client_roles'].blank?
       selected ||= []
     -%>
